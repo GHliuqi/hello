@@ -1,5 +1,6 @@
 package com.didispace.web;
 
+import com.didispace.UserVo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @RequestMapping("/hello")
-    public String index(){
-        return "Hello World";
+    public UserVo index(){
+        UserVo userVo = new UserVo();
+        userVo.setId(999999999999999999L);
+        userVo.setName("name");
+        return userVo;
     }
 }
